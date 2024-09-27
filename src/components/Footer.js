@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
-  faTwitter,
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
@@ -10,7 +9,9 @@ import {
   faPhoneVolume,
   faEnvelope,
   faPaperPlane,
+  faCow,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,14 +21,20 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Section 1 */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="text-yellow-400">PRO</span>BUZIN
-              </h3>
-              <p className="mb-4">
-                "Probuzin" could be interpreted as a catchy brand name
-                suggesting something professional, trendy, or health-focused,
-                fitting well for a shake café or a healthy beverage business.
-              </p>
+              <Link to={"/"} className="flex items-center space-x-2">
+                <FontAwesomeIcon
+                  icon={faCow}
+                  size="2x"
+                  className="text-green-500"
+                />{" "}
+                <h3 className="text-2xl font-bold">
+                  <span className="text-yellow-400">GAU</span>SOIL
+                </h3>
+              </Link>
+                <p className="mb-4 pt-2">
+                  Nurturing the earth with the power of gobri and organic
+                  solutions for sustainable village farming.
+                </p>
               <div className="flex space-x-4 text-xl">
                 <a
                   href="https://www.facebook.com"
@@ -36,14 +43,6 @@ const Footer = () => {
                   className="hover:text-gray-400 transform transition duration-300 hover:scale-110"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-400 transform transition duration-300 hover:scale-110"
-                >
-                  <FontAwesomeIcon icon={faTwitter} />
                 </a>
                 <a
                   href="https://www.instagram.com"
@@ -78,11 +77,6 @@ const Footer = () => {
                     Contact Us
                   </a>
                 </li>
-                <li>
-                  <a href="/" className="hover:text-gray-400">
-                    Another Link
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -103,7 +97,7 @@ const Footer = () => {
                   icon={faEnvelope}
                   className="mr-2 transform transition duration-300 hover:scale-110 hover:text-gray-400"
                 />
-                probuzin@gmail.com
+                gausoilnatural@gmail.com
               </p>
               <p className="flex items-center">
                 <FontAwesomeIcon
@@ -117,7 +111,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="bg-gray-900 text-center py-4 text-gray-400">
-        <p>@Probuzin</p>
+        <p>@GauSoil Naturals</p>
       </div>
     </>
   );

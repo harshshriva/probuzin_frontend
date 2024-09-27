@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import Logo from "./Logo";
 import { GrSearch } from "react-icons/gr";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
@@ -10,6 +9,8 @@ import { toast } from "react-toastify";
 import { setUserDetails } from "../store/userSlice";
 import ROLE from "../common/role";
 import Context from "../context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCow } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const user = useSelector((state) => state?.user?.user);
@@ -55,10 +56,14 @@ const Header = () => {
     <header className="h-16 shadow-md bg-white fixed w-full z-40">
       <div className=" h-full container mx-auto flex items-center px-4 justify-between">
         <div className="">
-          <Link to={"/"}>
-            {/* <Logo w={90} h={50}/> */}
+          <Link to={"/"} className="flex items-center space-x-2">
+            <FontAwesomeIcon
+              icon={faCow}
+              size="2x"
+              className="text-green-500"
+            />{" "}
             <h3 className="text-2xl font-bold">
-              <span className="text-yellow-400">PRO</span>BUZIN
+              <span className="text-yellow-400">GAU</span>SOIL
             </h3>
           </Link>
         </div>
